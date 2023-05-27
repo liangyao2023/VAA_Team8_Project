@@ -2,7 +2,7 @@ project:
   type: website
   
 website: 
-  title: "VAA_Team8_Project"
+  title: "VAA Team8 Project"
   navbar:
     left:
       - text: "Introduction"
@@ -11,7 +11,8 @@ website:
         menu: 
           - text: "Question 1"
           - text: "Question 2" 
-      - text: "APP"
+      - text: "Shiny APP"
+        
 
 
 format:
