@@ -1,5 +1,23 @@
 project:
+  type: website
+  
+website: 
   title: "VAA_Team8_Project"
+  navbar:
+    left:
+      - text: "Introduction"
+        href: "VAA_Team8_Project.qmd"
+      - text: "Analysis"
+        menu: 
+          - text: "Question 1"
+          - text: "Question 2" 
+      - text: "APP"
+
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
 
 editor: visual
-

@@ -1,11 +1,36 @@
 ---
 title: "VAA_Team8_Project"
+author: "LIM Li Ying, YEN Yun-hsuan, LIANG YAO"
+date: '27 May 2023'
+date-modified: "`r Sys.Date()`"
+execute: 
+  warning: false
+  echo: true
+  eval: true
+format: 
+  html: 
+    code-fold: true
+    code-summary: "Show the code"
 ---
 
-## Quarto
+## Visual Analytics and Applications - Team 8 Project
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## Background:
 
-```{r}
-1 + 1
-```
+FishEye International, a non-profit focused on countering illegal, unreported, and unregulated (IUU) fishing, has been given access to an international finance corporation's database on fishing related companies. In the past, FishEye has determined that companies with anomalous structures are far more likely to be involved in IUU (or other "fishy" business). FishEye has transformed the database into a knowledge graph. It includes information about companies, owners, workers, and financial status. FishEye is aiming to use this graph to identify anomalies that could indicate a company is involved in IUU.
+
+FishEye analysts have attempted to use traditional node-link visualizations and standard graph analyses, but these were found to be ineffective because the scale and detail in the data can obscure a business's true structure. Can you help FishEye develop a new visual analytics approach to better understand fishing business anomalies?
+
+## Objectives:
+
+Use visual analytics to understand patterns of groups in the knowledge graph and highlight anomalous groups.
+
+1.  Use visual analytics to identify anomalies in the business groups present in the knowledge graph. Limit your response to 400 words and 5 images.
+
+2.  Develop a visual analytics process to find similar businesses and group them. This analysis should focus on a business's most important features and present those features clearly to the user. Limit your response to 400 words and 5 images.
+
+3.  Measure similarity of businesses that you group in the previous question. Express confidence in your groupings visually. Limit your response to 400 words and 4 images.
+
+4.  Based on your visualizations, provide evidence for or against the case that anomalous companies are involved in illegal fishing. Which business groups should FishEye investigate further? Limit your response to 600 words and 6 images.
+
+## Proposal
