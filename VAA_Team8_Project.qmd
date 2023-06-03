@@ -1,7 +1,7 @@
 ---
 title: "VAA_Team8_Project"
 author: "LIM Li Ying, YEN Yun-hsuan, LIANG YAO"
-date: '27 May 2023'
+date: '4 Jun 2023'
 date-modified: "`r Sys.Date()`"
 execute: 
   warning: false
@@ -15,15 +15,15 @@ format:
 
 # Visual Analytics and Applications - Team 8 Project
 
-## Background:
+## Background
 
-The country of Oceanus has sought FishEye International's help in identifying companies possibly engaged in illegal, unreported, and unregulated (IUU) fishing. As part of the collaboration, FishEye's analysts received import/export data for Oceanus' marine and fishing industries. However, Oceanus has informed FishEye that the data is incomplete. To facilitate their analysis, FishEye transformed the trade data into a knowledge graph. Using this knowledge graph, they hope to understand business relationships, including finding links that will help them stop IUU fishing and protect marine species that are affected by it. FishEye analysts found that node-link diagrams gave them a good high-level overview of the knowledge graph. However, they are now looking for visualizations that provide more detail about patterns for entities in the knowledge graph. There are two main parts to this analysis.
+Illegal, unreported, and unregulated (IUU) fishing refers to fishing activities that are conducted in violation of both national and international fishing regulations (NOAA Fisheries, n.d.). Such fishing activities pose a significant threat to marine biodiversity, and sustainable fisheries. It undermines conservation efforts, leads to overfishing, and negatively impacts the livelihoods of fishing communities.
 
-First, FishEye knows from past experience that companies caught fishing illegally will shut down but will then often start up again under a different name. FishEye wants your help to visualize temporal patterns so they can compare the activities of companies over time to determine if the companies have returned to their nefarious acts.
+To identify companies who are potentially engaged in such unscrupulous activities, the country of Oceanus has enlisted the help of FishEye International. Using incomplete import and export data of Oceanus\' marine and fishing industries, Fisheye was able to generate a knowledge graph, in the hopes of uncovering business relationships and patterns that can aid in the detection of IUU fisheries. While node-link diagrams offered a useful overview of the knowledge graph at a high level, this study aims to create visualizations that offer more detailed insights into patterns involving entities within the knowledge graph.
 
-Second, FishEye has been using several tools, including artificial intelligence, to reason on the knowledge graph and suggest links that could extend the dataset. They have supplied 12 groups of link suggestions and need your help evaluating these groups to identify which tools are most reliable for completing the graph. FishEye is especially interested in identifying new temporal patterns or anomalies that are only present when new links are added.
+## Objectives
 
-## Objectives:
+With reference to Mini Challenge 2 of the VAST Challenge 2023, we aim to build an interactive Shiny app in order to answer the following questions:
 
 1.  Use visual analytics to identify temporal patterns for individual entities and between entities in the knowledge graph FishEye created from trade records. Categorize the types of business relationship patterns you find. Limit your response to 600 words and 6 images.
 
@@ -65,73 +65,96 @@ The knowledge graph and the 12 bundles each contain 2 data frames, namely \"node
 
 ## Methodology
 
-1.  Data cleaning and wrangling
+### 1. Data cleaning and wrangling
 
--   a\. Ensuring that the variables are formatted in the correct data type.
+-   Ensuring that the variables are formatted in the correct data type.
 
--   b\. Handling of missing values
+-   Handling of missing values
 
--   c\. Transformation of variables (e.g. creation of new variables)
+-   Transformation of variables (e.g. creation of new variables)
 
--   d\. Aggregation of edges
+-   Aggregation of edges
 
-2.  Exploratory Data Analysis
+### 2. Exploratory Data Analysis
 
--   a\. Check timeseries distribution of variables.
+-   Check timeseries distribution of variables.
 
--   b\. Check hscode with most weights.
+-   Check hscode with most weights.
 
--   c\. Decide on filtering criteria.
+-   Decide on filtering criteria.
 
-3.  Building of the Shiny app
+### 3. Building of the Shiny app
 
--   a\. Design website layout
+-   Design website layout
 
--   b\. Build Shiny according to our analysis
+-   Build Shiny according to our analysis
 
-4.  The following is a non-exhaustive list of R packages that will be used for this challenge:
+### 4. The following is a non-exhaustive list of R packages that will be used for this challenge:
 
--   \`shiny\`: for building interactive web applications
+-   `shiny`: for building interactive web applications
 
--   \`shinythemes\`: for customization of the Shiny app
+-   `shinythemes`: for customization of the Shiny app
 
--   \`jsonlite\`: for loading and reading of \".json\" files
+-   `jsonlite`: for loading and reading of \".json\" files
 
--   \`tidyverse\`: a collection of R packages used for data preparation and manipulation
+-   `tidyverse`: a collection of R packages used for data preparation and manipulation
 
--    \`igraph\`: for network analysis and visualization
+-   `igraph`: for network analysis and visualization
 
--   \`ggraph\`: an extension of ggplot2 for the creation of network graphs.
+-   `ggraph`: an extension of ggplot2 for the creation of network graphs.
 
--   \`visNetwork\`: for creating interactive network graphs
+-   `visNetwork`: for creating interactive network graphs
 
--    \`lubridate\`: for working with dates and times
-
--    \`plotly\`: for generating interactive charts
+-   `plotly`: for generating interactive charts
 
 ## Approach
 
 ### Q1. Categorize the types of business relationship patterns
 
-1.  Network Graph Building
+1.  Network Graph Building:
 
-2.  Centrality of nodes & categorize business relationships
+    An interactive network graph will be created using the *visNetwork* package. To identify potential major distributors/wholesalers and recipients, we will filter the nodes based on their high out-degree/in-degree edges. Additionally, we will explore networks between the top wholesalers and recipients using different hscodes to observe any variations in patterns among different product categories.
 
-3.  Temporal Pattern Mining
+2.  Centrality of nodes & categorize business relationships:
+
+    To determine the relationship between companies, metrics such as degree centrality or eigenvector centrality will be computed to measure centrality scores. The scores can be visualized by changing the appearance of the nodes.
+
+3.  Temporal Pattern Mining:
+
+    By observing shipping patterns over the same time period, we can then identify any abnormal relationships or patterns among these companies (e.g. companies who do not have any records for multiple years).
+
+The following diagram is a proposed example of changing the appearance of the nodes based on centrality scores. The bigger the nodes, the higher the degree centrality score, while the darker the nodes, the higher the eigenvector centrality score.
+
+![](images/Picture1.png)
 
 ### Q2. Evaluating predicted knowledge graph provided by Fisheye
 
-To determine the bundles that can be used to complete the main knowledge graph, we will plot facet nodes graphs for each bundle as below. Bundles that provide the most useful information will be selected.
+To determine which of the 12 AI generated bundles can be used to complete the main knowledge graph, facet nodes graphs will be plotted for each bundle. Bundles that provide the most useful information will be selected.
+
+The figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e. carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph.
 
 ![](images/Screenshot%202023-06-03%20at%2014.39.20.png){width="583"}
 
 ### Q3. Finding new patterns/anomalies
 
-The selected bundles will be combined into initial network, and new patterns would be explored base on that new network.
+The links of the selected bundles will be combined with the links of the original knowledge graph. A new interactive network graph will then be created using the *visNetwork* package, which will allow us to identify any new patterns or anomalies that may emerge when the new links are added. Steps similar to those used in Q1 will be used in the pattern/anomaly detection.
+
+The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph with no additional links.
+
+|                                                    |                                       |
+|------------------|------------------------------------------------------|
+| **Original network graph**                         | ![](images/Picture2.png)              |
+| **Network graph with links from selected bundles** | ![](images/Picture3.png){width="775"} |
 
 ### Q4. Identifying suspicious companies by new patterns
 
-After new patterns/anomalies are detected, suspicious companies would be identified.
+We will use the new patterns/anomalies detected during the previous step to aid in the identification of companies that are potentially suspicious. We will mainly look for:
+
+1.  Clusters or groups of companies that exhibit abnormal or unexpected patterns of connections, such as dense interconnections within a small group of companies
+
+2.  Fishers with high out-degree connections but significant variations across different years
+
+3.  Fishers with interrupted years lacking records
 
 ## **References**
 

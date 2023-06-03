@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="LIM Li Ying, YEN Yun-hsuan, LIANG YAO">
-<meta name="dcterms.date" content="2023-05-27">
+<meta name="dcterms.date" content="2023-06-04">
 
 <title>VAA Team8 Project - VAA_Team8_Project</title>
 <style>
@@ -113,14 +113,20 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#visual-analytics-and-applications---team-8-project" id="toc-visual-analytics-and-applications---team-8-project" class="nav-link active" data-scroll-target="#visual-analytics-and-applications---team-8-project">Visual Analytics and Applications - Team 8 Project</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background:</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives:</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data"><strong>The Data</strong></a>
   <ul class="collapse">
   <li><a href="#node-attributes" id="toc-node-attributes" class="nav-link" data-scroll-target="#node-attributes">Node Attributes</a></li>
   <li><a href="#edge-attributes" id="toc-edge-attributes" class="nav-link" data-scroll-target="#edge-attributes">Edge Attributes</a></li>
   </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#data-cleaning-and-wrangling" id="toc-data-cleaning-and-wrangling" class="nav-link" data-scroll-target="#data-cleaning-and-wrangling">1. Data cleaning and wrangling</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">2. Exploratory Data Analysis</a></li>
+  <li><a href="#building-of-the-shiny-app" id="toc-building-of-the-shiny-app" class="nav-link" data-scroll-target="#building-of-the-shiny-app">3. Building of the Shiny app</a></li>
+  <li><a href="#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" id="toc-the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" class="nav-link" data-scroll-target="#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge">4. The following is a non-exhaustive list of R packages that will be used for this challenge:</a></li>
+  </ul></li>
   <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a>
   <ul class="collapse">
   <li><a href="#q1.-categorize-the-types-of-business-relationship-patterns" id="toc-q1.-categorize-the-types-of-business-relationship-patterns" class="nav-link" data-scroll-target="#q1.-categorize-the-types-of-business-relationship-patterns">Q1. Categorize the types of business relationship patterns</a></li>
@@ -155,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 27, 2023</p>
+      <p class="date">June 4, 2023</p>
     </div>
   </div>
   
@@ -174,13 +180,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="visual-analytics-and-applications---team-8-project" class="level1">
 <h1>Visual Analytics and Applications - Team 8 Project</h1>
 <section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background:</h2>
-<p>The country of Oceanus has sought FishEye International’s help in identifying companies possibly engaged in illegal, unreported, and unregulated (IUU) fishing. As part of the collaboration, FishEye’s analysts received import/export data for Oceanus’ marine and fishing industries. However, Oceanus has informed FishEye that the data is incomplete. To facilitate their analysis, FishEye transformed the trade data into a knowledge graph. Using this knowledge graph, they hope to understand business relationships, including finding links that will help them stop IUU fishing and protect marine species that are affected by it. FishEye analysts found that node-link diagrams gave them a good high-level overview of the knowledge graph. However, they are now looking for visualizations that provide more detail about patterns for entities in the knowledge graph. There are two main parts to this analysis.</p>
-<p>First, FishEye knows from past experience that companies caught fishing illegally will shut down but will then often start up again under a different name. FishEye wants your help to visualize temporal patterns so they can compare the activities of companies over time to determine if the companies have returned to their nefarious acts.</p>
-<p>Second, FishEye has been using several tools, including artificial intelligence, to reason on the knowledge graph and suggest links that could extend the dataset. They have supplied 12 groups of link suggestions and need your help evaluating these groups to identify which tools are most reliable for completing the graph. FishEye is especially interested in identifying new temporal patterns or anomalies that are only present when new links are added.</p>
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Illegal, unreported, and unregulated (IUU) fishing refers to fishing activities that are conducted in violation of both national and international fishing regulations (NOAA Fisheries, n.d.). Such fishing activities pose a significant threat to marine biodiversity, and sustainable fisheries. It undermines conservation efforts, leads to overfishing, and negatively impacts the livelihoods of fishing communities.</p>
+<p>To identify companies who are potentially engaged in such unscrupulous activities, the country of Oceanus has enlisted the help of FishEye International. Using incomplete import and export data of Oceanus' marine and fishing industries, Fisheye was able to generate a knowledge graph, in the hopes of uncovering business relationships and patterns that can aid in the detection of IUU fisheries. While node-link diagrams offered a useful overview of the knowledge graph at a high level, this study aims to create visualizations that offer more detailed insights into patterns involving entities within the knowledge graph.</p>
 </section>
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives:</h2>
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>With reference to Mini Challenge 2 of the VAST Challenge 2023, we aim to build an interactive Shiny app in order to answer the following questions:</p>
 <ol type="1">
 <li><p>Use visual analytics to identify temporal patterns for individual entities and between entities in the knowledge graph FishEye created from trade records. Categorize the types of business relationship patterns you find. Limit your response to 600 words and 6 images.</p></li>
 <li><p>Evaluate the sets of predicted knowledge graph links FishEye has provided using visual analytics. Which sets are most reliable for completing the graph? Limit your response to 600 words and 6 images.</p></li>
@@ -278,67 +284,94 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<ol type="1">
-<li>Data cleaning and wrangling</li>
-</ol>
+<section id="data-cleaning-and-wrangling" class="level3">
+<h3 class="anchored" data-anchor-id="data-cleaning-and-wrangling">1. Data cleaning and wrangling</h3>
 <ul>
-<li><p>a. Ensuring that the variables are formatted in the correct data type.</p></li>
-<li><p>b. Handling of missing values</p></li>
-<li><p>c. Transformation of variables (e.g.&nbsp;creation of new variables)</p></li>
-<li><p>d. Aggregation of edges</p></li>
+<li><p>Ensuring that the variables are formatted in the correct data type.</p></li>
+<li><p>Handling of missing values</p></li>
+<li><p>Transformation of variables (e.g.&nbsp;creation of new variables)</p></li>
+<li><p>Aggregation of edges</p></li>
 </ul>
-<ol start="2" type="1">
-<li>Exploratory Data Analysis</li>
-</ol>
+</section>
+<section id="exploratory-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis">2. Exploratory Data Analysis</h3>
 <ul>
-<li><p>a. Check timeseries distribution of variables.</p></li>
-<li><p>b. Check hscode with most weights.</p></li>
-<li><p>c. Decide on filtering criteria.</p></li>
+<li><p>Check timeseries distribution of variables.</p></li>
+<li><p>Check hscode with most weights.</p></li>
+<li><p>Decide on filtering criteria.</p></li>
 </ul>
-<ol start="3" type="1">
-<li>Building of the Shiny app</li>
-</ol>
+</section>
+<section id="building-of-the-shiny-app" class="level3">
+<h3 class="anchored" data-anchor-id="building-of-the-shiny-app">3. Building of the Shiny app</h3>
 <ul>
-<li><p>a. Design website layout</p></li>
-<li><p>b. Build Shiny according to our analysis</p></li>
+<li><p>Design website layout</p></li>
+<li><p>Build Shiny according to our analysis</p></li>
 </ul>
-<ol start="4" type="1">
-<li>The following is a non-exhaustive list of R packages that will be used for this challenge:</li>
-</ol>
+</section>
+<section id="the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" class="level3">
+<h3 class="anchored" data-anchor-id="the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge">4. The following is a non-exhaustive list of R packages that will be used for this challenge:</h3>
 <ul>
-<li><p>`shiny`: for building interactive web applications</p></li>
-<li><p>`shinythemes`: for customization of the Shiny app</p></li>
-<li><p>`jsonlite`: for loading and reading of ".json" files</p></li>
-<li><p>`tidyverse`: a collection of R packages used for data preparation and manipulation</p></li>
-<li><p>`igraph`: for network analysis and visualization</p></li>
-<li><p>`ggraph`: an extension of ggplot2 for the creation of network graphs.</p></li>
-<li><p>`visNetwork`: for creating interactive network graphs</p></li>
-<li><p>`lubridate`: for working with dates and times</p></li>
-<li><p>`plotly`: for generating interactive charts</p></li>
+<li><p><code>shiny</code>: for building interactive web applications</p></li>
+<li><p><code>shinythemes</code>: for customization of the Shiny app</p></li>
+<li><p><code>jsonlite</code>: for loading and reading of ".json" files</p></li>
+<li><p><code>tidyverse</code>: a collection of R packages used for data preparation and manipulation</p></li>
+<li><p><code>igraph</code>: for network analysis and visualization</p></li>
+<li><p><code>ggraph</code>: an extension of ggplot2 for the creation of network graphs.</p></li>
+<li><p><code>visNetwork</code>: for creating interactive network graphs</p></li>
+<li><p><code>plotly</code>: for generating interactive charts</p></li>
 </ul>
+</section>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
 <section id="q1.-categorize-the-types-of-business-relationship-patterns" class="level3">
 <h3 class="anchored" data-anchor-id="q1.-categorize-the-types-of-business-relationship-patterns">Q1. Categorize the types of business relationship patterns</h3>
 <ol type="1">
-<li><p>Network Graph Building</p></li>
-<li><p>Centrality of nodes &amp; categorize business relationships</p></li>
-<li><p>Temporal Pattern Mining</p></li>
+<li><p>Network Graph Building:</p>
+<p>An interactive network graph will be created using the <em>visNetwork</em> package. To identify potential major distributors/wholesalers and recipients, we will filter the nodes based on their high out-degree/in-degree edges. Additionally, we will explore networks between the top wholesalers and recipients using different hscodes to observe any variations in patterns among different product categories.</p></li>
+<li><p>Centrality of nodes &amp; categorize business relationships:</p>
+<p>To determine the relationship between companies, metrics such as degree centrality or eigenvector centrality will be computed to measure centrality scores. The scores can be visualized by changing the appearance of the nodes.</p></li>
+<li><p>Temporal Pattern Mining:</p>
+<p>By observing shipping patterns over the same time period, we can then identify any abnormal relationships or patterns among these companies (e.g.&nbsp;companies who do not have any records for multiple years).</p></li>
 </ol>
+<p>The following diagram is a proposed example of changing the appearance of the nodes based on centrality scores. The bigger the nodes, the higher the degree centrality score, while the darker the nodes, the higher the eigenvector centrality score.</p>
+<p><img src="images/Picture1.png" class="img-fluid"></p>
 </section>
 <section id="q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye" class="level3">
 <h3 class="anchored" data-anchor-id="q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye">Q2. Evaluating predicted knowledge graph provided by Fisheye</h3>
-<p>To determine the bundles that can be used to complete the main knowledge graph, we will plot facet nodes graphs for each bundle as below. Bundles that provide the most useful information will be selected.</p>
+<p>To determine which of the 12 AI generated bundles can be used to complete the main knowledge graph, facet nodes graphs will be plotted for each bundle. Bundles that provide the most useful information will be selected.</p>
+<p>The figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e.&nbsp;carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph.</p>
 <p><img src="images/Screenshot 2023-06-03 at 14.39.20.png" class="img-fluid" width="583"></p>
 </section>
 <section id="q3.-finding-new-patternsanomalies" class="level3">
 <h3 class="anchored" data-anchor-id="q3.-finding-new-patternsanomalies">Q3. Finding new patterns/anomalies</h3>
-<p>The selected bundles will be combined into initial network, and new patterns would be explored base on that new network.</p>
+<p>The links of the selected bundles will be combined with the links of the original knowledge graph. A new interactive network graph will then be created using the <em>visNetwork</em> package, which will allow us to identify any new patterns or anomalies that may emerge when the new links are added. Steps similar to those used in Q1 will be used in the pattern/anomaly detection.</p>
+<p>The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph with no additional links.</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Original network graph</strong></td>
+<td><img src="images/Picture2.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><strong>Network graph with links from selected bundles</strong></td>
+<td><img src="images/Picture3.png" class="img-fluid" width="775"></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="q4.-identifying-suspicious-companies-by-new-patterns" class="level3">
 <h3 class="anchored" data-anchor-id="q4.-identifying-suspicious-companies-by-new-patterns">Q4. Identifying suspicious companies by new patterns</h3>
-<p>After new patterns/anomalies are detected, suspicious companies would be identified.</p>
+<p>We will use the new patterns/anomalies detected during the previous step to aid in the identification of companies that are potentially suspicious. We will mainly look for:</p>
+<ol type="1">
+<li><p>Clusters or groups of companies that exhibit abnormal or unexpected patterns of connections, such as dense interconnections within a small group of companies</p></li>
+<li><p>Fishers with high out-degree connections but significant variations across different years</p></li>
+<li><p>Fishers with interrupted years lacking records</p></li>
+</ol>
 </section>
 </section>
 <section id="references" class="level2">
