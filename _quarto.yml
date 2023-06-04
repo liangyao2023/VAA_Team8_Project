@@ -8,9 +8,7 @@ website:
       - text: "Introduction"
         href: "VAA_Team8_Project.qmd"
       - text: "Analysis"
-        menu: 
-          - text: "Question 1"
-          - text: "Question 2" 
+        #href: "analysis/analysis.html"
       - text: "Shiny APP"
         
 
