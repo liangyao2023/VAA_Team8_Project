@@ -85,10 +85,8 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./VAA_Team8_Project.html" aria-current="page">
  <span class="menu-text">Introduction</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./analysis/analysis.html">
- <span class="menu-text">Analysis</span></a>
-  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Analysis</span></li>
   <li class="dropdown-header">
  <span class="menu-text">Shiny APP</span></li>
 </ul>
@@ -177,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Illegal, unreported, and unregulated (IUU) fishing refers to fishing activities that are conducted in violation of both national and international fishing regulations (NOAA Fisheries, n.d.). Such fishing activities pose a significant threat to marine biodiversity, and sustainable fisheries. It undermines conservation efforts, leads to overfishing, and negatively impacts the livelihoods of fishing communities.</p>
-<p>To identify companies who are potentially engaged in such unscrupulous activities, the country of Oceanus has enlisted the help of FishEye International. Using incomplete import and export data of Oceanus’ marine and fishing industries, Fisheye was able to generate a knowledge graph, in the hopes of uncovering business relationships and patterns that can aid in the detection of IUU fisheries. While node-link diagrams offered a useful overview of the knowledge graph at a high level, this study aims to create visualizations that offer more detailed insights into patterns involving entities within the knowledge graph.</p>
+<p>To identify companies who are potentially engaged in such unscrupulous activities, the country of Oceanus has enlisted the help of FishEye International. Using incomplete import and export data of Oceanus' marine and fishing industries, Fisheye was able to generate a knowledge graph, in the hopes of uncovering business relationships and patterns that can aid in the detection of IUU fisheries. While node-link diagrams offered a useful overview of the knowledge graph at a high level, this study aims to create visualizations that offer more detailed insights into patterns involving entities within the knowledge graph.</p>
 </section>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
@@ -198,8 +196,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="node-attributes">Node Attributes</h3>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
+<col style="width: 25%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -231,8 +229,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="edge-attributes">Edge Attributes</h3>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
+<col style="width: 25%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -341,11 +339,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="q3.-finding-new-patternsanomalies" class="level3">
 <h3 class="anchored" data-anchor-id="q3.-finding-new-patternsanomalies">Q3. Finding new patterns/anomalies</h3>
 <p>The links of the selected bundles will be combined with the links of the original knowledge graph. A new interactive network graph will then be created using the <em>visNetwork</em> package, which will allow us to identify any new patterns or anomalies that may emerge when the new links are added. Steps similar to those used in Q1 will be used in the pattern/anomaly detection.</p>
-<p>The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph with no additional links.</p>
+<p>The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph.</p>
 <table class="table">
 <colgroup>
-<col style="width: 57%">
-<col style="width: 42%">
+<col style="width: 26%">
+<col style="width: 73%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -363,9 +361,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="q4.-identifying-suspicious-companies-by-new-patterns">Q4. Identifying suspicious companies by new patterns</h3>
 <p>We will use the new patterns/anomalies detected during the previous step to aid in the identification of companies that are potentially suspicious. We will mainly look for:</p>
 <ol type="1">
-<li><p>Clusters or groups of companies that exhibit abnormal or unexpected patterns of connections, such as dense interconnections within a small group of companies</p></li>
-<li><p>Fishers with high out-degree connections but significant variations across different years</p></li>
-<li><p>Fishers with interrupted years lacking records</p></li>
+<li><p>After filtering the edges by hscode, we will check whether clusters of companies trading products of a certain hscode category exhibit any abnormal connection patterns, compared to the trading of products from other hscodes. These abnormal connection patterns may include dense interconnections within a small group of companies, or isolated groups.</p></li>
+<li><p>After combining the links from the main network with those from the selected bundles, some original missing values can be filled. We will then reevaluate the network graph again to determine if there are companies with high weight but incomplete records for certain years. After identifying the companies with abnormal temporal pattern, we will then utilize interactive visualizations to analyze their data based on specific years or companies. This will allow us to examine how the network connections among these companies change over the years.</p></li>
 </ol>
 </section>
 </section>

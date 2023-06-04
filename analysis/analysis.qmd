@@ -688,7 +688,7 @@ mc2_edges_selected <- mc2_edges_aggregated2034 %>%
   group_by(from, to) %>%
   summarise(weights = sum(weights)) %>%
   filter(from!=to) %>%
-  filter(weights>48) %>%
+  filter(weights>12) %>%
   ungroup
 ```
 
@@ -770,7 +770,7 @@ mc2_edges_selected_new <- mc2_edges_newaggre %>%
   group_by(from, to) %>%
   summarise(weights = sum(weights)) %>%
   filter(from!=to) %>%
-  filter(weights>48) %>%
+  filter(weights>12) %>%
   ungroup
 ```
 
@@ -826,6 +826,24 @@ mc2_graph_selected_new %>%
   labs(size= "Out_degree")+
   geom_node_text(aes(label=id), show.legend = FALSE, size=2) +
   theme_graph()
+```
+
+-   nodes with outdegree more than 3 in original network
+
+```{r}
+mc2_graph_selected %>%
+    mutate(centrality = centrality_degree(mode = "out")) %>%
+    filter(centrality>5) %>%
+    select(id,group) 
+```
+
+-   nodes with outdegree more than 3 in new network
+
+```{r}
+mc2_graph_selected_new %>%
+    mutate(centrality = centrality_degree(mode = "out")) %>%
+    filter(centrality>5) %>%
+    select(id,group) 
 ```
 
 -   Interactive graph of original network
