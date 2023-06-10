@@ -142,7 +142,7 @@ We will use the new patterns/anomalies detected during the previous step to aid 
 | 5, Jun \~ 11, Jun  | Independent Analysis  | Whole team |
 | 12, Jun \~ 18, Jun | Combine of Work       | Whole team |
 | 19, Jun \~ 25, Jun | Shiny APP             | Whole team |
-| 26, Jun \~ 2, Jul  | Report                | Whole team |
+| 26, Jun \~ 2, Jul  | Poster                | Whole team |
 
 # References
 

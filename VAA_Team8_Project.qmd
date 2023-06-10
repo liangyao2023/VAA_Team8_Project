@@ -30,12 +30,3 @@ With reference to Mini Challenge 2 of the VAST Challenge 2023, we aim to build a
 3.  Illustrate how your visual analytics approach can be used to identify new patterns and/or anomalies that are present in the knowledge graph after you have added the links you deemed reliable in question 2. Limit your response to 300 words and 4 images.
 
 4.  Identify companies that fit a pattern of illegal fishing. Use visualizations to support your conclusions and your confidence in them. Limit your response to 300 words and 4 images.
-
-# Interfaces & Page Layout
-
-| Pages        | Contents                                                                |
-|------------|------------------------------------------------------------|
-| Introduction | To introduce the background and objective of this project.              |
-| Proposal     | To introduce the dataset and to propose the methodologies of analysing. |
-| Analysis     | To display the analyze process and conclusions.                         |
-| Shiny APP    | To show the interactive results of analysis.                            |
