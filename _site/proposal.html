@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="LIM Li Ying, YEN Yun-hsuan, LIANG YAO">
+<meta name="dcterms.date" content="2023-06-10">
+
+<title>VAA Team8 Project - Project Proposal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">VAA Team8 Project</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./VAA_Team8_Project.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./proposal.html" aria-current="page">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Analysis</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Shiny APP</span></li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link active" data-scroll-target="#the-data">The Data</a>
+  <ul class="collapse">
+  <li><a href="#node-attributes" id="toc-node-attributes" class="nav-link" data-scroll-target="#node-attributes">Node Attributes</a></li>
+  <li><a href="#edge-attributes" id="toc-edge-attributes" class="nav-link" data-scroll-target="#edge-attributes">Edge Attributes</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#data-cleaning-and-wrangling" id="toc-data-cleaning-and-wrangling" class="nav-link" data-scroll-target="#data-cleaning-and-wrangling">1. Data cleaning and wrangling</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">2. Exploratory Data Analysis</a></li>
+  <li><a href="#building-of-the-shiny-app" id="toc-building-of-the-shiny-app" class="nav-link" data-scroll-target="#building-of-the-shiny-app">3. Building of the Shiny app</a></li>
+  <li><a href="#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" id="toc-the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" class="nav-link" data-scroll-target="#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge">4. The following is a non-exhaustive list of R packages that will be used for this challenge:</a></li>
+  </ul></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a>
+  <ul class="collapse">
+  <li><a href="#q1.-categorize-the-types-of-business-relationship-patterns" id="toc-q1.-categorize-the-types-of-business-relationship-patterns" class="nav-link" data-scroll-target="#q1.-categorize-the-types-of-business-relationship-patterns">Q1. Categorize the types of business relationship patterns</a></li>
+  <li><a href="#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye" id="toc-q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye" class="nav-link" data-scroll-target="#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye">Q2. Evaluating predicted knowledge graph provided by Fisheye</a></li>
+  <li><a href="#q3.-finding-new-patternsanomalies" id="toc-q3.-finding-new-patternsanomalies" class="nav-link" data-scroll-target="#q3.-finding-new-patternsanomalies">Q3. Finding new patterns/anomalies</a></li>
+  <li><a href="#q4.-identifying-suspicious-companies-by-new-patterns" id="toc-q4.-identifying-suspicious-companies-by-new-patterns" class="nav-link" data-scroll-target="#q4.-identifying-suspicious-companies-by-new-patterns">Q4. Identifying suspicious companies by new patterns</a></li>
+  </ul></li>
+  <li><a href="#project-time-schedule" id="toc-project-time-schedule" class="nav-link" data-scroll-target="#project-time-schedule">Project Time Schedule</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Proposal</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>LIM Li Ying, YEN Yun-hsuan, LIANG YAO </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 10, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 10, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="the-data" class="level1">
+<h1>The Data</h1>
+<p>The data sets were obtained from the <a href="https://vast-challenge.github.io/2023/MC2.html">VAST Challenge 2023 website</a>, and consists of a knowledge graph and 12 bundles.</p>
+<p>The 12 bundles (namely carp, catfish, chub_mackerel, cod2, herring, lichen, mackerel, pollock, salmon, salmon_wgl, shark and tuna) are generated by FishEye International using an AI program, each consisting of link suggestions that can potentially be added to the main graph for additional information.</p>
+<p>The knowledge graph and the 12 bundles each contain 2 data frames, namely “nodes” and “links”.</p>
+<section id="node-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="node-attributes">Node Attributes</h2>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Variable</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Id</td>
+<td>Unique ID assigned to each fishing company</td>
+</tr>
+<tr class="even">
+<td>Shpcountry</td>
+<td>Country the company most often associated with when shipping</td>
+</tr>
+<tr class="odd">
+<td>Rcvcountry</td>
+<td>Country the company most often associated with when receiving</td>
+</tr>
+<tr class="even">
+<td>Dataset</td>
+<td>Always “MC2”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="edge-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="edge-attributes">Edge Attributes</h2>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>arrivaldate</td>
+<td>Date the shipment arrived at port in YYYY-MM-DD format.</td>
+</tr>
+<tr class="even">
+<td>hscode</td>
+<td>Harmonized System code for the shipment.</td>
+</tr>
+<tr class="odd">
+<td>valueofgoods_omu</td>
+<td>Customs-declared value of the total shipment, in Oceanus Monetary Units (OMU)</td>
+</tr>
+<tr class="even">
+<td>Volumeteu</td>
+<td>The volume of the shipment in ‘Twenty-foot equivalent units’.</td>
+</tr>
+<tr class="odd">
+<td>weightkg</td>
+<td>The weight of the shipment in kilograms.</td>
+</tr>
+<tr class="even">
+<td>dataset</td>
+<td>Always ‘MC2’.</td>
+</tr>
+<tr class="odd">
+<td>type</td>
+<td>Always “shipment”.</td>
+</tr>
+<tr class="even">
+<td>generated_by</td>
+<td>Name of the program that generated the edge. (Only found on ‘bundle’ records.)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<section id="data-cleaning-and-wrangling" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-and-wrangling">1. Data cleaning and wrangling</h2>
+<ul>
+<li><p>Ensuring that the variables are formatted in the correct data type.</p></li>
+<li><p>Handling of missing values</p></li>
+<li><p>Transformation of variables (e.g.&nbsp;creation of new variables)</p></li>
+<li><p>Aggregation of edges</p></li>
+</ul>
+</section>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">2. Exploratory Data Analysis</h2>
+<ul>
+<li><p>Check timeseries distribution of variables.</p></li>
+<li><p>Check hscode with most weights.</p></li>
+<li><p>Decide on filtering criteria.</p></li>
+</ul>
+</section>
+<section id="building-of-the-shiny-app" class="level2">
+<h2 class="anchored" data-anchor-id="building-of-the-shiny-app">3. Building of the Shiny app</h2>
+<ul>
+<li><p>Design website layout</p></li>
+<li><p>Build Shiny according to our analysis</p></li>
+</ul>
+</section>
+<section id="the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge">4. The following is a non-exhaustive list of R packages that will be used for this challenge:</h2>
+<ul>
+<li><p><code>shiny</code>: for building interactive web applications</p></li>
+<li><p><code>shinythemes</code>: for customization of the Shiny app</p></li>
+<li><p><code>jsonlite</code>: for loading and reading of “.json” files</p></li>
+<li><p><code>tidyverse</code>: a collection of R packages used for data preparation and manipulation</p></li>
+<li><p><code>igraph</code>: for network analysis and visualization</p></li>
+<li><p><code>ggraph</code>: an extension of ggplot2 for the creation of network graphs.</p></li>
+<li><p><code>visNetwork</code>: for creating interactive network graphs</p></li>
+<li><p><code>plotly</code>: for generating interactive charts</p></li>
+</ul>
+</section>
+</section>
+<section id="approach" class="level1">
+<h1>Approach</h1>
+<section id="q1.-categorize-the-types-of-business-relationship-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="q1.-categorize-the-types-of-business-relationship-patterns">Q1. Categorize the types of business relationship patterns</h2>
+<ol type="1">
+<li><p>Network Graph Building:</p>
+<p>An interactive network graph will be created using the <em>visNetwork</em> package. To identify potential major distributors/wholesalers and recipients, we will filter the nodes based on their high out-degree/in-degree edges. Additionally, we will explore networks between the top wholesalers and recipients using different hscodes to observe any variations in patterns among different product categories.</p></li>
+<li><p>Centrality of nodes &amp; categorize business relationships:</p>
+<p>To determine the relationship between companies, metrics such as degree centrality or eigenvector centrality will be computed to measure centrality scores. The scores can be visualized by changing the appearance of the nodes.</p></li>
+<li><p>Temporal Pattern Mining:</p>
+<p>By observing shipping patterns over the same time period, we can then identify any abnormal relationships or patterns among these companies (e.g.&nbsp;companies who do not have any records for multiple years).</p></li>
+</ol>
+<p>The following diagram is a proposed example of changing the appearance of the nodes based on centrality scores. The bigger the nodes, the higher the degree centrality score, while the darker the nodes, the higher the eigenvector centrality score.</p>
+<p><img src="images/Picture1.png" class="img-fluid"></p>
+</section>
+<section id="q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye" class="level2">
+<h2 class="anchored" data-anchor-id="q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye">Q2. Evaluating predicted knowledge graph provided by Fisheye</h2>
+<p>To determine which of the 12 AI generated bundles can be used to complete the main knowledge graph, facet nodes graphs will be plotted for each bundle. Bundles that provide the most useful information will be selected.</p>
+<p>The figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e.&nbsp;carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph.</p>
+<p><img src="images/Screenshot 2023-06-03 at 14.39.20.png" class="img-fluid" width="583"></p>
+</section>
+<section id="q3.-finding-new-patternsanomalies" class="level2">
+<h2 class="anchored" data-anchor-id="q3.-finding-new-patternsanomalies">Q3. Finding new patterns/anomalies</h2>
+<p>The links of the selected bundles will be combined with the links of the original knowledge graph. A new interactive network graph will then be created using the <em>visNetwork</em> package, which will allow us to identify any new patterns or anomalies that may emerge when the new links are added. Steps similar to those used in Q1 will be used in the pattern/anomaly detection.</p>
+<p>The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph.</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Original network graph</strong></td>
+<td><img src="images/Picture2.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><strong>Network graph with links from selected bundles</strong></td>
+<td><img src="images/Picture3.png" class="img-fluid" width="775"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="q4.-identifying-suspicious-companies-by-new-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="q4.-identifying-suspicious-companies-by-new-patterns">Q4. Identifying suspicious companies by new patterns</h2>
+<p>We will use the new patterns/anomalies detected during the previous step to aid in the identification of companies that are potentially suspicious. We will mainly look for:</p>
+<ol type="1">
+<li><p>After filtering the edges by hscode, we will check whether clusters of companies trading products of a certain hscode category exhibit any abnormal connection patterns, compared to the trading of products from other hscodes. These abnormal connection patterns may include dense interconnections within a small group of companies, or isolated groups.</p></li>
+<li><p>After combining the links from the main network with those from the selected bundles, some original missing values can be filled. We will then reevaluate the network graph again to determine if there are companies with high weight but incomplete records for certain years. After identifying the companies with abnormal temporal pattern, we will then utilize interactive visualizations to analyze their data based on specific years or companies. This will allow us to examine how the network connections among these companies change over the years.</p></li>
+</ol>
+</section>
+</section>
+<section id="project-time-schedule" class="level1">
+<h1>Project Time Schedule</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Task</th>
+<th>Allocation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>29, May ~ 4, Jun</td>
+<td>Agreement on Proposal</td>
+<td>Whole team</td>
+</tr>
+<tr class="even">
+<td>5, Jun ~ 11, Jun</td>
+<td>Independent Analysis</td>
+<td>Whole team</td>
+</tr>
+<tr class="odd">
+<td>12, Jun ~ 18, Jun</td>
+<td>Combine of Work</td>
+<td>Whole team</td>
+</tr>
+<tr class="even">
+<td>19, Jun ~ 25, Jun</td>
+<td>Shiny APP</td>
+<td>Whole team</td>
+</tr>
+<tr class="odd">
+<td>26, Jun ~ 2, Jul</td>
+<td>Report</td>
+<td>Whole team</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>NOAA Fisheries. (n.d.). <em>Understanding illegal, unreported, and unregulated fishing</em>. NOAA. https://www.fisheries.noaa.gov/insight/understanding-illegal-unreported-and-unregulated-fishing</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

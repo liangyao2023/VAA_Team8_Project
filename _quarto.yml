@@ -5,8 +5,10 @@ website:
   title: "VAA Team8 Project"
   navbar:
     left:
-      - text: "Introduction"
+      - text: "Home"
         href: "VAA_Team8_Project.qmd"
+      - text: "Proposal"
+        href: "proposal.qmd"
       - text: "Analysis"
       - text: "Shiny APP"
         
