@@ -105,7 +105,7 @@ The knowledge graph and the 12 bundles each contain 2 data frames, namely "nodes
 
 The following diagram is a proposed example of changing the appearance of the nodes based on centrality scores. The bigger the nodes, the higher the degree centrality score, while the darker the nodes, the higher the eigenvector centrality score.
 
-![](images/Picture1.png)
+![](images/Picture1.png){width="582"}
 
 ## Q2. Evaluating predicted knowledge graph provided by Fisheye
 
@@ -113,7 +113,7 @@ To determine which of the 12 AI generated bundles can be used to complete the ma
 
 The figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e. carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph.
 
-![](images/Screenshot 2023-06-03 at 14.39.20.png){width="561"}
+![](images/Screenshot 2023-06-03 at 14.39.20.png){width="509"}
 
 ## Q3. Finding new patterns/anomalies
 
