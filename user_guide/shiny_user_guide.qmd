@@ -121,4 +121,4 @@ This page lists out top 3 suspicious companies we found from temporal pattern an
 
 -   The identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it.
 
-![](images/wanted.png){width="513"}
+![](images/wanted.jpg){width="448"}
