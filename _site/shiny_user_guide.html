@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="LIM Li Ying, YEN Yun-hsuan, LIANG YAO">
+<meta name="dcterms.date" content="2023-06-02">
+
+<title>VAA Team 8 Project - Shiny APP User Guide</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">VAA Team 8 Project</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./VAA_Team8_Project.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposal.html">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./shiny_user_guide.html" aria-current="page">
+ <span class="menu-text">Shiny APP User Guide</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#find-or-be-blind-fraud-fishing-detection-for-fisheye" id="toc-find-or-be-blind-fraud-fishing-detection-for-fisheye" class="nav-link active" data-scroll-target="#find-or-be-blind-fraud-fishing-detection-for-fisheye">Find or Be Blind: Fraud Fishing Detection for Fisheye</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda"><strong>1. Exploratory Data Analysis (EDA)</strong></a>
+  <ul class="collapse">
+  <li><a href="#distribution-of-edges-by-hscode" id="toc-distribution-of-edges-by-hscode" class="nav-link" data-scroll-target="#distribution-of-edges-by-hscode"><strong>1.1 Distribution of Edges by HSCode</strong></a></li>
+  <li><a href="#distribution-of-edges-by-year" id="toc-distribution-of-edges-by-year" class="nav-link" data-scroll-target="#distribution-of-edges-by-year"><strong>1.2 Distribution of Edges by Year</strong></a></li>
+  <li><a href="#distribution-of-edges-by-month" id="toc-distribution-of-edges-by-month" class="nav-link" data-scroll-target="#distribution-of-edges-by-month"><strong>1.3 Distribution of Edges by Month</strong></a></li>
+  <li><a href="#number-of-source-and-target-by-year" id="toc-number-of-source-and-target-by-year" class="nav-link" data-scroll-target="#number-of-source-and-target-by-year"><strong>1.4 Number of Source and Target by Year</strong></a></li>
+  </ul></li>
+  <li><a href="#patterns-of-knowledge-graph" id="toc-patterns-of-knowledge-graph" class="nav-link" data-scroll-target="#patterns-of-knowledge-graph"><strong>2. Patterns of Knowledge Graph</strong></a>
+  <ul class="collapse">
+  <li><a href="#temporal-pattern-heatmap" id="toc-temporal-pattern-heatmap" class="nav-link" data-scroll-target="#temporal-pattern-heatmap"><strong>2.1 Temporal Pattern Heatmap</strong></a></li>
+  <li><a href="#network-graph" id="toc-network-graph" class="nav-link" data-scroll-target="#network-graph"><strong>2.2 Network Graph</strong></a></li>
+  </ul></li>
+  <li><a href="#predicted-links-selection" id="toc-predicted-links-selection" class="nav-link" data-scroll-target="#predicted-links-selection"><strong>3. Predicted Links Selection</strong></a>
+  <ul class="collapse">
+  <li><a href="#nodes-of-all-bundles" id="toc-nodes-of-all-bundles" class="nav-link" data-scroll-target="#nodes-of-all-bundles"><strong>3.1 Nodes of All Bundles</strong></a></li>
+  <li><a href="#selected-links" id="toc-selected-links" class="nav-link" data-scroll-target="#selected-links"><strong>3.2 Selected Links</strong></a></li>
+  </ul></li>
+  <li><a href="#new-pattern" id="toc-new-pattern" class="nav-link" data-scroll-target="#new-pattern">4. New Pattern</a>
+  <ul class="collapse">
+  <li><a href="#temporal-pattern" id="toc-temporal-pattern" class="nav-link" data-scroll-target="#temporal-pattern"><strong>4.1 Temporal Pattern</strong></a></li>
+  <li><a href="#network-graph-1" id="toc-network-graph-1" class="nav-link" data-scroll-target="#network-graph-1"><strong>4.2 Network Graph</strong></a></li>
+  </ul></li>
+  <li><a href="#wanted" id="toc-wanted" class="nav-link" data-scroll-target="#wanted"><strong>5. Wanted</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Shiny APP User Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>LIM Li Ying, YEN Yun-hsuan, LIANG YAO </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 2, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 2, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="find-or-be-blind-fraud-fishing-detection-for-fisheye" class="level1">
+<h1><a href="https://smu-liangyao.shinyapps.io/VAA_team_8/">Find or Be Blind: Fraud Fishing Detection for Fisheye</a></h1>
+<p><a href="https://smu-liangyao.shinyapps.io/VAA_team_8/">(click to go to Shiny APP)</a></p>
+<section id="exploratory-data-analysis-eda" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda"><strong>1. Exploratory Data Analysis (EDA)</strong></h2>
+<section id="distribution-of-edges-by-hscode" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-edges-by-hscode"><strong>1.1 Distribution of Edges by HSCode</strong></h3>
+<p>Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of [2028, 2034], default selection is the distribution of all year together. Since hscode "306170" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.</p>
+<p><img src="images/distribution by hscode.jpg" class="img-fluid" width="570"></p>
+</section>
+<section id="distribution-of-edges-by-year" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-edges-by-year"><strong>1.2 Distribution of Edges by Year</strong></h3>
+<p>This plot shows the distribution of edges of "306170" by year in range of [2028, 2034].</p>
+<p><img src="images/distribution by year.jpg" class="img-fluid"></p>
+</section>
+<section id="distribution-of-edges-by-month" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-edges-by-month"><strong>1.3 Distribution of Edges by Month</strong></h3>
+<p>This plot shows the distribution of edges of "306170" by month and user can select the years in range of [2028, 2034], default selection is 2028.</p>
+<p><img src="images/distribution by month.png" class="img-fluid" width="479"></p>
+</section>
+<section id="number-of-source-and-target-by-year" class="level3">
+<h3 class="anchored" data-anchor-id="number-of-source-and-target-by-year"><strong>1.4 Number of Source and Target by Year</strong></h3>
+<p>This plot shows the number of source/target nodes of "306170" by year in range of [2028, 2034].</p>
+<p><img src="images/source target count.jpg" class="img-fluid"></p>
+</section>
+</section>
+<section id="patterns-of-knowledge-graph" class="level2">
+<h2 class="anchored" data-anchor-id="patterns-of-knowledge-graph"><strong>2. Patterns of Knowledge Graph</strong></h2>
+<section id="temporal-pattern-heatmap" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-pattern-heatmap"><strong>2.1 Temporal Pattern Heatmap</strong></h3>
+<p>In this heatmap, users can identify companies exhibiting irregular temporal patterns, characterized by interruptions of out-shipment records lasting three years or longer.</p>
+<p>Under the “Select record type” option, users can specify the type of count displayed on the heatmap:</p>
+<ul>
+<li><p>[Total shipment count]: Shows the total weight count of shipments sent by each company.</p></li>
+<li><p>[Out degree count]: Indicates the number of unique companies to which each company sends out shipments.</p></li>
+</ul>
+<p>By comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.</p>
+<p><img src="images/origin heatmap.png" class="img-fluid" width="614"></p>
+</section>
+<section id="network-graph" class="level3">
+<h3 class="anchored" data-anchor-id="network-graph"><strong>2.2 Network Graph</strong></h3>
+<p>In this graph, users can set maximum weight to filter the network by step of 10 within range of [1,600]. Companies' out-degree rank within top 20% would have their names shown on the graph.</p>
+<ul>
+<li><p>Nodes with only out-directed edges grouped as "fisher";</p></li>
+<li><p>Nodes with only in-directed edges grouped as "wholesaler";</p></li>
+<li><p>Nodes with both in/out-directed edges grouped as "transport";</p></li>
+<li><p>Nodes size along with nodes' out-degree;</p></li>
+<li><p>Edge width along with weights.</p></li>
+</ul>
+<p><img src="images/origin network.jpg" class="img-fluid" width="615"></p>
+</section>
+</section>
+<section id="predicted-links-selection" class="level2">
+<h2 class="anchored" data-anchor-id="predicted-links-selection"><strong>3. Predicted Links Selection</strong></h2>
+<section id="nodes-of-all-bundles" class="level3">
+<h3 class="anchored" data-anchor-id="nodes-of-all-bundles"><strong>3.1 Nodes of All Bundles</strong></h3>
+<p>This is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.</p>
+<p><img src="images/bundle nodes.jpg" class="img-fluid"></p>
+</section>
+<section id="selected-links" class="level3">
+<h3 class="anchored" data-anchor-id="selected-links"><strong>3.2 Selected Links</strong></h3>
+<p>This is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies' out-degree rank within top 20% would have their names shown on the graph.</p>
+<p>Same definition of nodes' group, size and edge width used as knowledge network graph.</p>
+<p><img src="images/bundle network.jpg" class="img-fluid" width="618"></p>
+</section>
+</section>
+<section id="new-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="new-pattern">4. New Pattern</h2>
+<section id="temporal-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-pattern"><strong>4.1 Temporal Pattern</strong></h3>
+<p>The line plot shows the temporal pattern after adding new selected bundles.</p>
+<p>Users have the option to choose and compare different types of temporal patterns, including:</p>
+<ul>
+<li><p>[Fluctuated]: This type compares the three companies with the most variable total out shipment counts from 2028 to 2034, ranging from 0 to 300.</p></li>
+<li><p>[Stable]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.</p></li>
+</ul>
+<p><img src="images/new heatmap.png" class="img-fluid" width="607"></p>
+</section>
+<section id="network-graph-1" class="level3">
+<h3 class="anchored" data-anchor-id="network-graph-1"><strong>4.2 Network Graph</strong></h3>
+<p>In this graph, network of hscode ("106414") with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of [1,800]. Companies' out-degree rank within top 20% would have their names shown on the graph.</p>
+<p>Same definition of nodes' group, size and edge width used as knowledge network graph.</p>
+<p><img src="images/new network.jpg" class="img-fluid" width="612"></p>
+</section>
+</section>
+<section id="wanted" class="level2">
+<h2 class="anchored" data-anchor-id="wanted"><strong>5. Wanted</strong></h2>
+<p>This page lists out top 3 suspicious companies we found from temporal pattern and network after combined with predicted links.</p>
+<ul>
+<li><p>The identification of suspicious companies from temporal pattern is based on two criteria: interruptions in their shipment records and significant fluctuations observed throughout the analyzed period. These patterns differentiate them from other companies that have continuous records and similar shipment counts.</p></li>
+<li><p>The identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it.</p></li>
+</ul>
+<p><img src="images/wanted.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

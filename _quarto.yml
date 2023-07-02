@@ -9,8 +9,8 @@ website:
         href: "VAA_Team8_Project.qmd"
       - text: "Proposal"
         href: "proposal.qmd"
-      - text: "Poster"
       - text: "Shiny APP User Guide"
+        href: "shiny_user_guide.qmd"
         
 
 
