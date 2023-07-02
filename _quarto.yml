@@ -8,11 +8,11 @@ website:
     search: true
     left: 
       - text: "Home"
-        href: "index.qmd"
+        href: "index.html"
       - text: "Proposal"
-        href: "proposal/proposal.qmd"
+        href: "proposal/proposal.html"
       - text: "Shiny APP User Guide"
-        href: "user_guide/shiny_user_guide.qmd"
+        href: "user_guide/shiny_user_guide.html"
       
 
 
