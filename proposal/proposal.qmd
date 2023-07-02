@@ -24,7 +24,7 @@ The knowledge graph and the 12 bundles each contain 2 data frames, namely "nodes
 ## Node Attributes
 
 | **Variable** | **Description**                                               |
-|----------------|--------------------------------------------------------|
+|--------------|---------------------------------------------------------------|
 | Id           | Unique ID assigned to each fishing company                    |
 | Shpcountry   | Country the company most often associated with when shipping  |
 | Rcvcountry   | Country the company most often associated with when receiving |
@@ -33,7 +33,7 @@ The knowledge graph and the 12 bundles each contain 2 data frames, namely "nodes
 ## Edge Attributes
 
 | Variable         | Description                                                                    |
-|----------------|--------------------------------------------------------|
+|------------------|--------------------------------------------------------------------------------|
 | arrivaldate      | Date the shipment arrived at port in YYYY-MM-DD format.                        |
 | hscode           | Harmonized System code for the shipment.                                       |
 | valueofgoods_omu | Customs-declared value of the total shipment, in Oceanus Monetary Units (OMU)  |
@@ -113,7 +113,7 @@ To determine which of the 12 AI generated bundles can be used to complete the ma
 
 The figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e. carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph.
 
-![](images/Screenshot 2023-06-03 at 14.39.20.png){width="509"}
+![](images/Screenshot%202023-06-03%20at%2014.39.20.png){width="509"}
 
 ## Q3. Finding new patterns/anomalies
 
@@ -122,7 +122,7 @@ The links of the selected bundles will be combined with the links of the origina
 The following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph.
 
 |                                                    |                          |
-|-----------------------------------------|-------------------------------|
+|----------------------------------------------------|--------------------------|
 | **Original network graph**                         | ![](images/Picture2.png) |
 | **Network graph with links from selected bundles** | ![](images/Picture3.png) |
 

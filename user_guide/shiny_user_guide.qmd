@@ -23,7 +23,7 @@ format:
 
 Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of \[2028, 2034\], default selection is the distribution of all year together. Since hscode "306170" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.
 
-![](images/distribution%20by%20hscode.jpg){width="485"}
+![](images/distribution by hscode.jpg){width="485"}
 
 ### **1.2 Distribution of Edges by Year**
 
@@ -121,4 +121,4 @@ This page lists out top 3 suspicious companies we found from temporal pattern an
 
 -   The identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it.
 
-![](images/wanted.jpg){width="467"}
+![](images/wanted.jpg){width="603"}
