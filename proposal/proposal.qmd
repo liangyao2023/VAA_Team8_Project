@@ -81,7 +81,7 @@ The knowledge graph and the 12 bundles each contain 2 data frames, namely "nodes
 
 -   `igraph`: for network analysis and visualization
 
--   `ggraph`![](images/Picture1.png): an extension of ggplot2 for the creation of network graphs.
+-   `ggraph`: an extension of ggplot2 for the creation of network graphs.
 
 -   `visNetwork`: for creating interactive network graphs
 
