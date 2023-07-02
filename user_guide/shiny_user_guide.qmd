@@ -13,7 +13,7 @@ format:
     code-summary: "Show the code"
 ---
 
-# [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-liangyao.shinyapps.io/VAA_team_8/) 
+## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-liangyao.shinyapps.io/VAA_team_8/)
 
 [(click to go to Shiny APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
 
@@ -21,27 +21,27 @@ format:
 
 ### **1.1 Distribution of Edges by HSCode**
 
-Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of \[2028, 2034\], default selection is the distribution of all year together. Since hscode \"306170\" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.
+Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of \[2028, 2034\], default selection is the distribution of all year together. Since hscode "306170" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.
 
-![](images/distribution by hscode.jpg){width="570"}
+![](images/distribution%20by%20hscode.jpg){width="570"}
 
 ### **1.2 Distribution of Edges by Year**
 
-This plot shows the distribution of edges of \"306170\" by year in range of \[2028, 2034\].
+This plot shows the distribution of edges of "306170" by year in range of \[2028, 2034\].
 
-![](images/distribution by year.jpg)
+![](images/distribution%20by%20year.jpg)
 
 ### **1.3 Distribution of Edges by Month**
 
-This plot shows the distribution of edges of \"306170\" by month and user can select the years in range of \[2028, 2034\], default selection is 2028.
+This plot shows the distribution of edges of "306170" by month and user can select the years in range of \[2028, 2034\], default selection is 2028.
 
-![](images/distribution by month.png){width="479"}
+![](images/distribution%20by%20month.png){width="479"}
 
 ### **1.4 Number of Source and Target by Year**
 
-This plot shows the number of source/target nodes of \"306170\" by year in range of \[2028, 2034\].
+This plot shows the number of source/target nodes of "306170" by year in range of \[2028, 2034\].
 
-![](images/source target count.jpg)
+![](images/source%20target%20count.jpg)
 
 ## **2. Patterns of Knowledge Graph**
 
@@ -57,23 +57,23 @@ Under the "Select record type" option, users can specify the type of count displ
 
 By comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.
 
-![](images/origin heatmap.png){width="614"}
+![](images/origin%20heatmap.png){width="614"}
 
 ### **2.2 Network Graph**
 
-In this graph, users can set maximum weight to filter the network by step of 10 within range of \[1,600\]. Companies\' out-degree rank within top 20% would have their names shown on the graph.
+In this graph, users can set maximum weight to filter the network by step of 10 within range of \[1,600\]. Companies' out-degree rank within top 20% would have their names shown on the graph.
 
--   Nodes with only out-directed edges grouped as \"fisher\";
+-   Nodes with only out-directed edges grouped as "fisher";
 
--   Nodes with only in-directed edges grouped as \"wholesaler\";
+-   Nodes with only in-directed edges grouped as "wholesaler";
 
--   Nodes with both in/out-directed edges grouped as \"transport\";
+-   Nodes with both in/out-directed edges grouped as "transport";
 
--   Nodes size along with nodes\' out-degree;
+-   Nodes size along with nodes' out-degree;
 
 -   Edge width along with weights.
 
-![](images/origin network.jpg){width="615"}
+![](images/origin%20network.jpg){width="615"}
 
 ## **3. Predicted Links Selection**
 
@@ -81,15 +81,15 @@ In this graph, users can set maximum weight to filter the network by step of 10 
 
 This is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.
 
-![](images/bundle nodes.jpg)
+![](images/bundle%20nodes.jpg)
 
 ### **3.2 Selected Links**
 
-This is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies\' out-degree rank within top 20% would have their names shown on the graph.
+This is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies' out-degree rank within top 20% would have their names shown on the graph.
 
-Same definition of nodes\' group, size and edge width used as knowledge network graph.
+Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/bundle network.jpg){width="618"}
+![](images/bundle%20network.jpg){width="618"}
 
 ## 4. New Pattern
 
@@ -103,15 +103,15 @@ Users have the option to choose and compare different types of temporal patterns
 
 -   \[Stable\]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.
 
-![](images/new heatmap.png){width="607"}
+![](images/new%20heatmap.png){width="607"}
 
 ### **4.2 Network Graph**
 
-In this graph, network of hscode (\"106414\") with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of \[1,800\]. Companies\' out-degree rank within top 20% would have their names shown on the graph.
+In this graph, network of hscode ("106414") with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of \[1,800\]. Companies' out-degree rank within top 20% would have their names shown on the graph.
 
-Same definition of nodes\' group, size and edge width used as knowledge network graph.
+Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/new network.jpg){width="612"}
+![](images/new%20network.jpg){width="612"}
 
 ## **5. Wanted**
 

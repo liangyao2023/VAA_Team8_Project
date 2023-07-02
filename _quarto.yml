@@ -2,16 +2,18 @@ project:
   type: website
   
 website: 
-  title: "VAA Team 8 Project"
-  navbar:
-    left:
+  title: "FIND or BE BLIND"
+    
+  navbar: 
+    search: true
+    left: 
       - text: "Home"
-        href: "VAA_Team8_Project.qmd"
+        href: "index.qmd"
       - text: "Proposal"
-        href: "proposal.qmd"
+        href: "proposal/proposal.qmd"
       - text: "Shiny APP User Guide"
-        href: "shiny_user_guide.qmd"
-        
+        href: "user_guide/shiny_user_guide.qmd"
+      
 
 
 format:

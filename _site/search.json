@@ -1,77 +1,112 @@
 [
   {
-    "objectID": "shiny_user_guide.html",
-    "href": "shiny_user_guide.html",
+    "objectID": "user_guide/shiny_user_guide.html",
+    "href": "user_guide/shiny_user_guide.html",
     "title": "Shiny APP User Guide",
     "section": "",
-    "text": "(click to go to Shiny APP)\n\n\n\n\nTop 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of [2028, 2034], default selection is the distribution of all year together. Since hscode \"306170\" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.\n\n\n\n\nThis plot shows the distribution of edges of \"306170\" by year in range of [2028, 2034].\n\n\n\n\nThis plot shows the distribution of edges of \"306170\" by month and user can select the years in range of [2028, 2034], default selection is 2028.\n\n\n\n\nThis plot shows the number of source/target nodes of \"306170\" by year in range of [2028, 2034].\n\n\n\n\n\n\n\nIn this heatmap, users can identify companies exhibiting irregular temporal patterns, characterized by interruptions of out-shipment records lasting three years or longer.\nUnder the “Select record type” option, users can specify the type of count displayed on the heatmap:\n\n[Total shipment count]: Shows the total weight count of shipments sent by each company.\n[Out degree count]: Indicates the number of unique companies to which each company sends out shipments.\n\nBy comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.\n\n\n\n\nIn this graph, users can set maximum weight to filter the network by step of 10 within range of [1,600]. Companies' out-degree rank within top 20% would have their names shown on the graph.\n\nNodes with only out-directed edges grouped as \"fisher\";\nNodes with only in-directed edges grouped as \"wholesaler\";\nNodes with both in/out-directed edges grouped as \"transport\";\nNodes size along with nodes' out-degree;\nEdge width along with weights.\n\n\n\n\n\n\n\n\nThis is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.\n\n\n\n\nThis is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies' out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes' group, size and edge width used as knowledge network graph.\n\n\n\n\n\n\n\nThe line plot shows the temporal pattern after adding new selected bundles.\nUsers have the option to choose and compare different types of temporal patterns, including:\n\n[Fluctuated]: This type compares the three companies with the most variable total out shipment counts from 2028 to 2034, ranging from 0 to 300.\n[Stable]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.\n\n\n\n\n\nIn this graph, network of hscode (\"106414\") with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of [1,800]. Companies' out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes' group, size and edge width used as knowledge network graph.\n\n\n\n\n\nThis page lists out top 3 suspicious companies we found from temporal pattern and network after combined with predicted links.\n\nThe identification of suspicious companies from temporal pattern is based on two criteria: interruptions in their shipment records and significant fluctuations observed throughout the analyzed period. These patterns differentiate them from other companies that have continuous records and similar shipment counts.\nThe identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it."
+    "text": "(click to go to Shiny APP)"
   },
   {
-    "objectID": "VAA_Team8_Project.html",
-    "href": "VAA_Team8_Project.html",
+    "objectID": "user_guide/shiny_user_guide.html#exploratory-data-analysis-eda",
+    "href": "user_guide/shiny_user_guide.html#exploratory-data-analysis-eda",
+    "title": "Shiny APP User Guide",
+    "section": "1. Exploratory Data Analysis (EDA)",
+    "text": "1. Exploratory Data Analysis (EDA)\n\n1.1 Distribution of Edges by HSCode\nTop 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of [2028, 2034], default selection is the distribution of all year together. Since hscode “306170” contains most edges, our analysis on knowledge graph would mainly focus on this hscode.\n\n\n\n1.2 Distribution of Edges by Year\nThis plot shows the distribution of edges of “306170” by year in range of [2028, 2034].\n\n\n\n1.3 Distribution of Edges by Month\nThis plot shows the distribution of edges of “306170” by month and user can select the years in range of [2028, 2034], default selection is 2028.\n\n\n\n1.4 Number of Source and Target by Year\nThis plot shows the number of source/target nodes of “306170” by year in range of [2028, 2034]."
+  },
+  {
+    "objectID": "user_guide/shiny_user_guide.html#patterns-of-knowledge-graph",
+    "href": "user_guide/shiny_user_guide.html#patterns-of-knowledge-graph",
+    "title": "Shiny APP User Guide",
+    "section": "2. Patterns of Knowledge Graph",
+    "text": "2. Patterns of Knowledge Graph\n\n2.1 Temporal Pattern Heatmap\nIn this heatmap, users can identify companies exhibiting irregular temporal patterns, characterized by interruptions of out-shipment records lasting three years or longer.\nUnder the “Select record type” option, users can specify the type of count displayed on the heatmap:\n\n[Total shipment count]: Shows the total weight count of shipments sent by each company.\n[Out degree count]: Indicates the number of unique companies to which each company sends out shipments.\n\nBy comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.\n\n\n\n2.2 Network Graph\nIn this graph, users can set maximum weight to filter the network by step of 10 within range of [1,600]. Companies’ out-degree rank within top 20% would have their names shown on the graph.\n\nNodes with only out-directed edges grouped as “fisher”;\nNodes with only in-directed edges grouped as “wholesaler”;\nNodes with both in/out-directed edges grouped as “transport”;\nNodes size along with nodes’ out-degree;\nEdge width along with weights."
+  },
+  {
+    "objectID": "user_guide/shiny_user_guide.html#predicted-links-selection",
+    "href": "user_guide/shiny_user_guide.html#predicted-links-selection",
+    "title": "Shiny APP User Guide",
+    "section": "3. Predicted Links Selection",
+    "text": "3. Predicted Links Selection\n\n3.1 Nodes of All Bundles\nThis is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.\n\n\n\n3.2 Selected Links\nThis is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies’ out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes’ group, size and edge width used as knowledge network graph."
+  },
+  {
+    "objectID": "user_guide/shiny_user_guide.html#new-pattern",
+    "href": "user_guide/shiny_user_guide.html#new-pattern",
+    "title": "Shiny APP User Guide",
+    "section": "4. New Pattern",
+    "text": "4. New Pattern\n\n4.1 Temporal Pattern\nThe line plot shows the temporal pattern after adding new selected bundles.\nUsers have the option to choose and compare different types of temporal patterns, including:\n\n[Fluctuated]: This type compares the three companies with the most variable total out shipment counts from 2028 to 2034, ranging from 0 to 300.\n[Stable]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.\n\n\n\n\n4.2 Network Graph\nIn this graph, network of hscode (“106414”) with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of [1,800]. Companies’ out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes’ group, size and edge width used as knowledge network graph."
+  },
+  {
+    "objectID": "user_guide/shiny_user_guide.html#wanted",
+    "href": "user_guide/shiny_user_guide.html#wanted",
+    "title": "Shiny APP User Guide",
+    "section": "5. Wanted",
+    "text": "5. Wanted\nThis page lists out top 3 suspicious companies we found from temporal pattern and network after combined with predicted links.\n\nThe identification of suspicious companies from temporal pattern is based on two criteria: interruptions in their shipment records and significant fluctuations observed throughout the analyzed period. These patterns differentiate them from other companies that have continuous records and similar shipment counts.\nThe identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Find Or Be Blind: Fraud Fishing Detection for Fisheye",
     "section": "",
     "text": "Background\nIllegal, unreported, and unregulated (IUU) fishing refers to fishing activities that are conducted in violation of both national and international fishing regulations (NOAA Fisheries, n.d.). Such fishing activities pose a significant threat to marine biodiversity, and sustainable fisheries. It undermines conservation efforts, leads to overfishing, and negatively impacts the livelihoods of fishing communities.\nTo identify companies who are potentially engaged in such unscrupulous activities, the country of Oceanus has enlisted the help of FishEye International. Using incomplete import and export data of Oceanus’ marine and fishing industries, Fisheye was able to generate a knowledge graph, in the hopes of uncovering business relationships and patterns that can aid in the detection of IUU fisheries. While node-link diagrams offered a useful overview of the knowledge graph at a high level, this study aims to create visualizations that offer more detailed insights into patterns involving entities within the knowledge graph.\n\n\nObjectives\nWith reference to Mini Challenge 2 of the VAST Challenge 2023, we aim to build an interactive Shiny app in order to answer the following questions:\n\nUse visual analytics to identify temporal patterns for individual entities and between entities in the knowledge graph FishEye created from trade records. Categorize the types of business relationship patterns you find. Limit your response to 600 words and 6 images.\nEvaluate the sets of predicted knowledge graph links FishEye has provided using visual analytics. Which sets are most reliable for completing the graph? Limit your response to 600 words and 6 images.\nIllustrate how your visual analytics approach can be used to identify new patterns and/or anomalies that are present in the knowledge graph after you have added the links you deemed reliable in question 2. Limit your response to 300 words and 4 images.\nIdentify companies that fit a pattern of illegal fishing. Use visualizations to support your conclusions and your confidence in them. Limit your response to 300 words and 4 images."
   },
   {
-    "objectID": "proposal.html",
-    "href": "proposal.html",
+    "objectID": "proposal/proposal.html",
+    "href": "proposal/proposal.html",
     "title": "Project Proposal",
     "section": "",
     "text": "The data sets were obtained from the VAST Challenge 2023 website, and consists of a knowledge graph and 12 bundles.\nThe 12 bundles (namely carp, catfish, chub_mackerel, cod2, herring, lichen, mackerel, pollock, salmon, salmon_wgl, shark and tuna) are generated by FishEye International using an AI program, each consisting of link suggestions that can potentially be added to the main graph for additional information.\nThe knowledge graph and the 12 bundles each contain 2 data frames, namely “nodes” and “links”.\n\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nId\nUnique ID assigned to each fishing company\n\n\nShpcountry\nCountry the company most often associated with when shipping\n\n\nRcvcountry\nCountry the company most often associated with when receiving\n\n\nDataset\nAlways “MC2”\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\narrivaldate\nDate the shipment arrived at port in YYYY-MM-DD format.\n\n\nhscode\nHarmonized System code for the shipment.\n\n\nvalueofgoods_omu\nCustoms-declared value of the total shipment, in Oceanus Monetary Units (OMU)\n\n\nVolumeteu\nThe volume of the shipment in ‘Twenty-foot equivalent units’.\n\n\nweightkg\nThe weight of the shipment in kilograms.\n\n\ndataset\nAlways ‘MC2’.\n\n\ntype\nAlways “shipment”.\n\n\ngenerated_by\nName of the program that generated the edge. (Only found on ‘bundle’ records.)"
   },
   {
-    "objectID": "proposal.html#data-cleaning-and-wrangling",
-    "href": "proposal.html#data-cleaning-and-wrangling",
+    "objectID": "proposal/proposal.html#data-cleaning-and-wrangling",
+    "href": "proposal/proposal.html#data-cleaning-and-wrangling",
     "title": "Project Proposal",
     "section": "1. Data cleaning and wrangling",
     "text": "1. Data cleaning and wrangling\n\nEnsuring that the variables are formatted in the correct data type.\nHandling of missing values\nTransformation of variables (e.g. creation of new variables)\nAggregation of edges"
   },
   {
-    "objectID": "proposal.html#exploratory-data-analysis",
-    "href": "proposal.html#exploratory-data-analysis",
+    "objectID": "proposal/proposal.html#exploratory-data-analysis",
+    "href": "proposal/proposal.html#exploratory-data-analysis",
     "title": "Project Proposal",
     "section": "2. Exploratory Data Analysis",
     "text": "2. Exploratory Data Analysis\n\nCheck timeseries distribution of variables.\nCheck hscode with most weights.\nDecide on filtering criteria."
   },
   {
-    "objectID": "proposal.html#building-of-the-shiny-app",
-    "href": "proposal.html#building-of-the-shiny-app",
+    "objectID": "proposal/proposal.html#building-of-the-shiny-app",
+    "href": "proposal/proposal.html#building-of-the-shiny-app",
     "title": "Project Proposal",
     "section": "3. Building of the Shiny app",
     "text": "3. Building of the Shiny app\n\nDesign website layout\nBuild Shiny according to our analysis"
   },
   {
-    "objectID": "proposal.html#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge",
-    "href": "proposal.html#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge",
+    "objectID": "proposal/proposal.html#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge",
+    "href": "proposal/proposal.html#the-following-is-a-non-exhaustive-list-of-r-packages-that-will-be-used-for-this-challenge",
     "title": "Project Proposal",
     "section": "4. The following is a non-exhaustive list of R packages that will be used for this challenge:",
     "text": "4. The following is a non-exhaustive list of R packages that will be used for this challenge:\n\nshiny: for building interactive web applications\nshinythemes: for customization of the Shiny app\njsonlite: for loading and reading of “.json” files\ntidyverse: a collection of R packages used for data preparation and manipulation\nigraph: for network analysis and visualization\nggraph: an extension of ggplot2 for the creation of network graphs.\nvisNetwork: for creating interactive network graphs\nplotly: for generating interactive charts"
   },
   {
-    "objectID": "proposal.html#q1.-categorize-the-types-of-business-relationship-patterns",
-    "href": "proposal.html#q1.-categorize-the-types-of-business-relationship-patterns",
+    "objectID": "proposal/proposal.html#q1.-categorize-the-types-of-business-relationship-patterns",
+    "href": "proposal/proposal.html#q1.-categorize-the-types-of-business-relationship-patterns",
     "title": "Project Proposal",
     "section": "Q1. Categorize the types of business relationship patterns",
     "text": "Q1. Categorize the types of business relationship patterns\n\nNetwork Graph Building:\nAn interactive network graph will be created using the visNetwork package. To identify potential major distributors/wholesalers and recipients, we will filter the nodes based on their high out-degree/in-degree edges. Additionally, we will explore networks between the top wholesalers and recipients using different hscodes to observe any variations in patterns among different product categories.\nCentrality of nodes & categorize business relationships:\nTo determine the relationship between companies, metrics such as degree centrality or eigenvector centrality will be computed to measure centrality scores. The scores can be visualized by changing the appearance of the nodes.\nTemporal Pattern Mining:\nBy observing shipping patterns over the same time period, we can then identify any abnormal relationships or patterns among these companies (e.g. companies who do not have any records for multiple years).\n\nThe following diagram is a proposed example of changing the appearance of the nodes based on centrality scores. The bigger the nodes, the higher the degree centrality score, while the darker the nodes, the higher the eigenvector centrality score."
   },
   {
-    "objectID": "proposal.html#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye",
-    "href": "proposal.html#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye",
+    "objectID": "proposal/proposal.html#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye",
+    "href": "proposal/proposal.html#q2.-evaluating-predicted-knowledge-graph-provided-by-fisheye",
     "title": "Project Proposal",
     "section": "Q2. Evaluating predicted knowledge graph provided by Fisheye",
     "text": "Q2. Evaluating predicted knowledge graph provided by Fisheye\nTo determine which of the 12 AI generated bundles can be used to complete the main knowledge graph, facet nodes graphs will be plotted for each bundle. Bundles that provide the most useful information will be selected.\nThe figure below shows an early prototype of our proposed approach. As seen from the figure, cod2, lichen, salmon, shark and tuna bundles contain relatively fewer nodes compared to the other bundles, thus these bundles will not really value-add to our main network graph. Therefore, only bundles excluding the aforementioned bundles (i.e. carp, catfish, chub_mackerel, herring, mackerel, pollock, and salmon_wgl bundles) will be added to our main network graph."
   },
   {
-    "objectID": "proposal.html#q3.-finding-new-patternsanomalies",
-    "href": "proposal.html#q3.-finding-new-patternsanomalies",
+    "objectID": "proposal/proposal.html#q3.-finding-new-patternsanomalies",
+    "href": "proposal/proposal.html#q3.-finding-new-patternsanomalies",
     "title": "Project Proposal",
     "section": "Q3. Finding new patterns/anomalies",
     "text": "Q3. Finding new patterns/anomalies\nThe links of the selected bundles will be combined with the links of the original knowledge graph. A new interactive network graph will then be created using the visNetwork package, which will allow us to identify any new patterns or anomalies that may emerge when the new links are added. Steps similar to those used in Q1 will be used in the pattern/anomaly detection.\nThe following diagram shows an early prototype of what our updated interactive network graph will look like, in comparison to the original network graph.\n\n\n\n\n\n\n\nOriginal network graph\n\n\n\nNetwork graph with links from selected bundles"
   },
   {
-    "objectID": "proposal.html#q4.-identifying-suspicious-companies-by-new-patterns",
-    "href": "proposal.html#q4.-identifying-suspicious-companies-by-new-patterns",
+    "objectID": "proposal/proposal.html#q4.-identifying-suspicious-companies-by-new-patterns",
+    "href": "proposal/proposal.html#q4.-identifying-suspicious-companies-by-new-patterns",
     "title": "Project Proposal",
     "section": "Q4. Identifying suspicious companies by new patterns",
     "text": "Q4. Identifying suspicious companies by new patterns\nWe will use the new patterns/anomalies detected during the previous step to aid in the identification of companies that are potentially suspicious. We will mainly look for:\n\nAfter filtering the edges by hscode, we will check whether clusters of companies trading products of a certain hscode category exhibit any abnormal connection patterns, compared to the trading of products from other hscodes. These abnormal connection patterns may include dense interconnections within a small group of companies, or isolated groups.\nAfter combining the links from the main network with those from the selected bundles, some original missing values can be filled. We will then reevaluate the network graph again to determine if there are companies with high weight but incomplete records for certain years. After identifying the companies with abnormal temporal pattern, we will then utilize interactive visualizations to analyze their data based on specific years or companies. This will allow us to examine how the network connections among these companies change over the years."
