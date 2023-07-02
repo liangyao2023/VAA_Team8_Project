@@ -23,25 +23,25 @@ format:
 
 Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of \[2028, 2034\], default selection is the distribution of all year together. Since hscode "306170" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.
 
-![](images/distribution by hscode.jpg){width="485"}
+![](images/distribution%20by%20hscode.jpg){width="485"}
 
 ### **1.2 Distribution of Edges by Year**
 
 This plot shows the distribution of edges of "306170" by year in range of \[2028, 2034\].
 
-![](images/distribution by year.jpg)
+![](images/distribution%20by%20year.jpg)
 
 ### **1.3 Distribution of Edges by Month**
 
 This plot shows the distribution of edges of "306170" by month and user can select the years in range of \[2028, 2034\], default selection is 2028.
 
-![](images/distribution by month.png){width="458"}
+![](images/distribution%20by%20month.png){width="458"}
 
 ### **1.4 Number of Source and Target by Year**
 
 This plot shows the number of source/target nodes of "306170" by year in range of \[2028, 2034\].
 
-![](images/source target count.jpg)
+![](images/source%20target%20count.jpg)
 
 ## **2. Patterns of Knowledge Graph**
 
@@ -57,7 +57,7 @@ Under the "Select record type" option, users can specify the type of count displ
 
 By comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.
 
-![](images/origin heatmap.png){width="568"}
+![](images/origin%20heatmap.png){width="568"}
 
 ### **2.2 Network Graph**
 
@@ -73,7 +73,7 @@ In this graph, users can set maximum weight to filter the network by step of 10 
 
 -   Edge width along with weights.
 
-![](images/origin network.jpg){width="566"}
+![](images/origin%20network.jpg){width="566"}
 
 ## **3. Predicted Links Selection**
 
@@ -81,7 +81,7 @@ In this graph, users can set maximum weight to filter the network by step of 10 
 
 This is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.
 
-![](images/bundle nodes.jpg)
+![](images/bundle%20nodes.jpg)
 
 ### **3.2 Selected Links**
 
@@ -89,7 +89,7 @@ This is the network graph of those 7 selected bundles. User can choose each bund
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/bundle network.jpg){width="622"}
+![](images/bundle%20network.jpg){width="622"}
 
 ## 4. New Pattern
 
@@ -103,7 +103,7 @@ Users have the option to choose and compare different types of temporal patterns
 
 -   \[Stable\]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.
 
-![](images/new heatmap.png){width="607"}
+![](images/new%20heatmap.png){width="607"}
 
 ### **4.2 Network Graph**
 
@@ -111,7 +111,7 @@ In this graph, network of hscode ("106414") with most change after combined with
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/new network.jpg){width="609"}
+![](images/new%20network.jpg){width="609"}
 
 ## **5. Wanted**
 
