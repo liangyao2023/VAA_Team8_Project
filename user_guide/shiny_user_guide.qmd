@@ -13,9 +13,9 @@ format:
     code-summary: "Show the code"
 ---
 
-## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-liangyao.shinyapps.io/VAA_team_8/)
+## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)
 
-[(click to go to Shiny APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
+[(click to go to ](https://smu-liangyao.shinyapps.io/VAA_team_8/)[Shiny](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)[ APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
 
 ## **1. Exploratory Data Analysis (EDA)**
 
@@ -23,7 +23,7 @@ format:
 
 Top 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of \[2028, 2034\], default selection is the distribution of all year together. Since hscode "306170" contains most edges, our analysis on knowledge graph would mainly focus on this hscode.
 
-![](images/distribution by hscode.jpg){width="485"}
+![](images/distribution%20by%20hscode.jpg){width="485"}
 
 ### **1.2 Distribution of Edges by Year**
 
