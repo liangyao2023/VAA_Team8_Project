@@ -1,21 +1,6 @@
----
-title: "Shiny APP User Guide"
-author: "LIM Li Ying, YEN Yun-hsuan, LIANG YAO"
-date: '2 Jun 2023'
-date-modified: "`r Sys.Date()`"
-execute: 
-  warning: false
-  echo: true
-  eval: true
-format: 
-  html: 
-    code-fold: true
-    code-summary: "Show the code"
----
+## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-vaa.shinyapps.io/Shiny_VAA/)
 
-## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)
-
-[(click to go to](https://smu-liangyao.shinyapps.io/VAA_team_8/)[Shiny](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)[APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
+[(click to go to Shiny APP)](https://smu-vaa.shinyapps.io/Shiny_VAA/)
 
 ## **1. Exploratory Data Analysis (EDA)**
 
@@ -73,7 +58,7 @@ In this graph, users can set maximum weight to filter the network by step of 10 
 
 -   Edge width along with weights.
 
-![](images/origin network.jpg){width="592"}
+![](images/origin%20network.jpg){width="595"}
 
 ## **3. Predicted Links Selection**
 
@@ -89,7 +74,7 @@ This is the network graph of those 7 selected bundles. User can choose each bund
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/bundle network.jpg)
+![](images/bundle%20network.jpg)
 
 ## 4. New Pattern
 
@@ -111,7 +96,7 @@ In this graph, network of hscode ("106414") with most change after combined with
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/new network.jpg)
+![](images/new%20network.jpg)
 
 ## **5. Wanted**
 

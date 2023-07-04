@@ -2,42 +2,42 @@
   {
     "objectID": "user_guide/shiny_user_guide.html",
     "href": "user_guide/shiny_user_guide.html",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "",
-    "text": "(click to go toShinyAPP)"
+    "text": "(click to go to Shiny APP)"
   },
   {
     "objectID": "user_guide/shiny_user_guide.html#exploratory-data-analysis-eda",
     "href": "user_guide/shiny_user_guide.html#exploratory-data-analysis-eda",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "1. Exploratory Data Analysis (EDA)",
     "text": "1. Exploratory Data Analysis (EDA)\n\n1.1 Distribution of Edges by HSCode\nTop 10 hscode with the greatest number of edges shown in this plot. User can select the years within range of [2028, 2034], default selection is the distribution of all year together. Since hscode “306170” contains most edges, our analysis on knowledge graph would mainly focus on this hscode.\n\n\n\n1.2 Distribution of Edges by Year\nThis plot shows the distribution of edges of “306170” by year in range of [2028, 2034].\n\n\n\n1.3 Distribution of Edges by Month\nThis plot shows the distribution of edges of “306170” by month and user can select the years in range of [2028, 2034], default selection is 2028.\n\n\n\n1.4 Number of Source and Target by Year\nThis plot shows the number of source/target nodes of “306170” by year in range of [2028, 2034]."
   },
   {
     "objectID": "user_guide/shiny_user_guide.html#patterns-of-knowledge-graph",
     "href": "user_guide/shiny_user_guide.html#patterns-of-knowledge-graph",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "2. Patterns of Knowledge Graph",
     "text": "2. Patterns of Knowledge Graph\n\n2.1 Temporal Pattern Heatmap\nIn this heatmap, users can identify companies exhibiting irregular temporal patterns, characterized by interruptions of out-shipment records lasting three years or longer.\nUnder the “Select record type” option, users can specify the type of count displayed on the heatmap:\n\n[Total shipment count]: Shows the total weight count of shipments sent by each company.\n[Out degree count]: Indicates the number of unique companies to which each company sends out shipments.\n\nBy comparing the total shipments to the outgoings, users can gain greater insight into potential reasons for disruptions in shipment records and understand the business relationships of each company. Some companies may show a sudden decrease in the number of companies sending goods, or some companies have been sending goods to only few companies.\n\n\n\n2.2 Network Graph\nIn this graph, users can set maximum weight to filter the network by step of 10 within range of [1,600]. Companies’ out-degree rank within top 20% would have their names shown on the graph.\n\nNodes with only out-directed edges grouped as “fisher”;\nNodes with only in-directed edges grouped as “wholesaler”;\nNodes with both in/out-directed edges grouped as “transport”;\nNodes size along with nodes’ out-degree;\nEdge width along with weights."
   },
   {
     "objectID": "user_guide/shiny_user_guide.html#predicted-links-selection",
     "href": "user_guide/shiny_user_guide.html#predicted-links-selection",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "3. Predicted Links Selection",
     "text": "3. Predicted Links Selection\n\n3.1 Nodes of All Bundles\nThis is a facet nodes graph of all predicted bundles provided by Fisheye. And from this, we selected the 7 bundles with more nodes considering those can contribute more to the knowledge network.\n\n\n\n3.2 Selected Links\nThis is the network graph of those 7 selected bundles. User can choose each bundle to gather a closer look at the network of each bundle, default selection is network of all selected bundles combined. Companies’ out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes’ group, size and edge width used as knowledge network graph."
   },
   {
     "objectID": "user_guide/shiny_user_guide.html#new-pattern",
     "href": "user_guide/shiny_user_guide.html#new-pattern",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "4. New Pattern",
     "text": "4. New Pattern\n\n4.1 Temporal Pattern\nThe line plot shows the temporal pattern after adding new selected bundles.\nUsers have the option to choose and compare different types of temporal patterns, including:\n\n[Fluctuated]: This type compares the three companies with the most variable total out shipment counts from 2028 to 2034, ranging from 0 to 300.\n[Stable]: By selecting this type, users can compare normal companies with similar shipment counts around 300. This reveals a consistent and continuous pattern in the out shipments without significant fluctuations.\n\n\n\n\n4.2 Network Graph\nIn this graph, network of hscode (“106414”) with most change after combined with selected bundles. Users can select type of network (original network or new combined network), and can also set maximum weight to filter the network by step of 10 within range of [1,800]. Companies’ out-degree rank within top 20% would have their names shown on the graph.\nSame definition of nodes’ group, size and edge width used as knowledge network graph."
   },
   {
     "objectID": "user_guide/shiny_user_guide.html#wanted",
     "href": "user_guide/shiny_user_guide.html#wanted",
-    "title": "Shiny APP User Guide",
+    "title": "FIND or BE BLIND",
     "section": "5. Wanted",
     "text": "5. Wanted\nThis page lists out top 3 suspicious companies we found from temporal pattern and network after combined with predicted links.\n\nThe identification of suspicious companies from temporal pattern is based on two criteria: interruptions in their shipment records and significant fluctuations observed throughout the analyzed period. These patterns differentiate them from other companies that have continuous records and similar shipment counts.\nThe identification of suspicious companies from network located is based on lowest closeness and highest out degree, and we think those nodes are relatively far from the center of network but gather a little group around it."
   },
