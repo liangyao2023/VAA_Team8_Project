@@ -15,7 +15,7 @@ format:
 
 ## [Find or Be Blind: Fraud Fishing Detection for Fisheye](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)
 
-[(click to go to ](https://smu-liangyao.shinyapps.io/VAA_team_8/)[Shiny](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)[ APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
+[(click to go to](https://smu-liangyao.shinyapps.io/VAA_team_8/)[Shiny](https://smu-vaa-team8.shinyapps.io/VAA_team_8/)[APP)](https://smu-liangyao.shinyapps.io/VAA_team_8/)
 
 ## **1. Exploratory Data Analysis (EDA)**
 
@@ -73,7 +73,7 @@ In this graph, users can set maximum weight to filter the network by step of 10 
 
 -   Edge width along with weights.
 
-![](images/origin%20network.jpg){width="566"}
+![](images/origin network.jpg){width="592"}
 
 ## **3. Predicted Links Selection**
 
@@ -89,7 +89,7 @@ This is the network graph of those 7 selected bundles. User can choose each bund
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/bundle%20network.jpg){width="622"}
+![](images/bundle network.jpg)
 
 ## 4. New Pattern
 
@@ -111,7 +111,7 @@ In this graph, network of hscode ("106414") with most change after combined with
 
 Same definition of nodes' group, size and edge width used as knowledge network graph.
 
-![](images/new%20network.jpg){width="609"}
+![](images/new network.jpg)
 
 ## **5. Wanted**
 
